@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fkv-Yl-jrs">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--AlertVC-->
+        <scene sceneID="iAN-FM-gOM">
+            <objects>
+                <viewController storyboardIdentifier="AlertVC" id="fkv-Yl-jrs" customClass="AlertVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bta-mo-q9A"/>
+                        <viewControllerLayoutGuide type="bottom" id="DYd-t1-OJr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d0B-SR-f3v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Um0-GC-cCp">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fkv-Yl-jrs" id="VGp-S0-Pkr"/>
+                                    <outlet property="delegate" destination="fkv-Yl-jrs" id="ygP-pP-y9Z"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Um0-GC-cCp" secondAttribute="trailing" id="1Wy-ne-6fK"/>
+                            <constraint firstItem="Um0-GC-cCp" firstAttribute="leading" secondItem="d0B-SR-f3v" secondAttribute="leading" id="Uib-cG-NXx"/>
+                            <constraint firstItem="Um0-GC-cCp" firstAttribute="top" secondItem="d0B-SR-f3v" secondAttribute="top" id="WOR-bc-xlr"/>
+                            <constraint firstItem="DYd-t1-OJr" firstAttribute="top" secondItem="Um0-GC-cCp" secondAttribute="bottom" id="dcq-ho-PI6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BQ8-ji-Hgd"/>
+                    <connections>
+                        <outlet property="tb" destination="Um0-GC-cCp" id="YYi-c6-uWh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yhL-7f-kOy" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889" y="137"/>
+        </scene>
+    </scenes>
+</document>
