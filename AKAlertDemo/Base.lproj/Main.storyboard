@@ -25,17 +25,23 @@
                                     <outlet property="delegate" destination="fkv-Yl-jrs" id="ygP-pP-y9Z"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HRK-2T-j7q"/>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="HRK-2T-j7q" firstAttribute="width" secondItem="Um0-GC-cCp" secondAttribute="width" id="0cs-mR-VhK"/>
                             <constraint firstAttribute="trailing" secondItem="Um0-GC-cCp" secondAttribute="trailing" id="1Wy-ne-6fK"/>
+                            <constraint firstItem="HRK-2T-j7q" firstAttribute="centerY" secondItem="Um0-GC-cCp" secondAttribute="centerY" id="2bv-Ro-cEW"/>
+                            <constraint firstItem="HRK-2T-j7q" firstAttribute="height" secondItem="Um0-GC-cCp" secondAttribute="height" id="QbL-kd-ljS"/>
                             <constraint firstItem="Um0-GC-cCp" firstAttribute="leading" secondItem="d0B-SR-f3v" secondAttribute="leading" id="Uib-cG-NXx"/>
                             <constraint firstItem="Um0-GC-cCp" firstAttribute="top" secondItem="d0B-SR-f3v" secondAttribute="top" id="WOR-bc-xlr"/>
+                            <constraint firstItem="HRK-2T-j7q" firstAttribute="centerX" secondItem="Um0-GC-cCp" secondAttribute="centerX" id="Yyq-pV-id4"/>
                             <constraint firstItem="DYd-t1-OJr" firstAttribute="top" secondItem="Um0-GC-cCp" secondAttribute="bottom" id="dcq-ho-PI6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BQ8-ji-Hgd"/>
                     <connections>
+                        <outlet property="imgView" destination="HRK-2T-j7q" id="ufc-ZT-ygC"/>
                         <outlet property="tb" destination="Um0-GC-cCp" id="YYi-c6-uWh"/>
                     </connections>
                 </viewController>

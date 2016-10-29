@@ -79,9 +79,20 @@ typedef void(^animateBlock)();
         
         self.frame=[[UIScreen mainScreen]bounds];
         
-        //add blur effect view
-        UIVisualEffectView* bgV =[[UIVisualEffectView  alloc ]initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark]];
-        bgV .frame=self.frame;
+        
+         //add blur effect view
+        UIView* bgV =nil;
+       
+        if([UIDevice currentDevice].systemVersion.floatValue >= 8.0){
+            bgV = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark]];
+            
+        }else{
+            UIToolbar *toolBar = [[UIToolbar alloc]init];
+            toolBar.barStyle = UIBarStyleBlackOpaque;
+            bgV = toolBar;
+        }
+ 
+        bgV.frame=self.frame;
         [self addSubview:bgV];
         bgV.userInteractionEnabled=YES;
         UITapGestureRecognizer* tapBg=[[UITapGestureRecognizer  alloc]initWithTarget:self action:@selector(bgTap)];
