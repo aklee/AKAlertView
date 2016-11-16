@@ -18,6 +18,10 @@ Alert View
 
 
 ```objective-c
+
+#import "AKAlertView.h"
+
+
 AKAlertView* alertView= [AKAlertView alertView:@"title" des:@"description"  type:AKAlertSuccess effect:AKAlertEffectDrop sureTitle:sureTitle cancelTitle:cancelTitle];
             
 [alertView show];
